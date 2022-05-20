@@ -10,7 +10,7 @@ namespace Kasta.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Cactus Spear Projectile");
+            DisplayName.SetDefault("Cactus Spear");
         }
 
 		public override void SetDefaults()
