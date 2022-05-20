@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2zGBpyMFTPCowPoEcsR2whLQ3YVsvXO3bfWEMz8acDw6+qKWzmolSHJwFE8+/LrlL3dsduSbMEWGkecPF4pLbQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Owner\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\Kasta\\Kasta.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Owner\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
