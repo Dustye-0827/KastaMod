@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
@@ -19,16 +19,13 @@ namespace Kasta.Tiles
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
+			drop = ModContent.ItemType<Items.SuspiciousHead>();
 			name.SetDefault("Suspicious Petrified Egg");
 			AddMapEntry(new Color(255, 155, 0), name);
 			dustType = DustID.Platinum;
 			disableSmartCursor = true;
-		}
-
-        public override bool Drop(int i, int j)
-        {
-			Item.NewItem(i * 16, j * 16, 16, 16, mod.ItemType("SuspiciousHead"), Main.rand.Next(0, 1));
-            return base.Drop(i, j);
-        }
+	}
     }
 }
+
+// fixed
