@@ -13,13 +13,13 @@ namespace Kasta.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Kasta Pickaxe");
-            Tooltip.SetDefault("'something creative here lator.'");
+            Tooltip.SetDefault("");
         }
         public override void SetDefaults()
         {
             item.UseSound = SoundID.Item1;
             item.melee = true;
-            item.damage = 12;
+            item.damage = 9;
             item.width = 28;
             item.height = 24;
             item.useStyle = 1;
