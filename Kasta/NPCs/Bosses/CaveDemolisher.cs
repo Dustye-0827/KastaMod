@@ -26,7 +26,7 @@ namespace Kasta.NPCs.Bosses
 			npc.boss = true;
 			npc.damage = 35;
 			npc.defense = 1;
-			npc.lifeMax = 35;
+			npc.lifeMax = 1500;
 			npc.value = 50f;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
@@ -82,7 +82,7 @@ namespace Kasta.NPCs.Bosses
 			npc.aiStyle = -1;
 			npc.damage = 35;
 			npc.defense = 2;
-			npc.lifeMax = 35;
+			npc.lifeMax = 500;
 			npc.value = 50f;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
@@ -97,7 +97,7 @@ namespace Kasta.NPCs.Bosses
 			npc.aiStyle = -1;
 			npc.damage = 35;
 			npc.defense = 4;
-			npc.lifeMax = 35;
+			npc.lifeMax = 500;
 			npc.value = 50f;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
