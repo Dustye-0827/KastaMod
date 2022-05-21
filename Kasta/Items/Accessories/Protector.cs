@@ -14,14 +14,14 @@ namespace Kasta.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Kasta's Protector");
-            Tooltip.SetDefault("'something creative here lator.'");
+            Tooltip.SetDefault("Defense 6 \nGrants immunity to knockback \nGrants immunity to fireblocks \nIncrease life regen \n5% increase damage");
         }
         public override void SetDefaults()
         {
 
             item.width = 28;
             item.height = 24;
-            item.accessory = true; // Makes this item an accessory.
+            item.accessory = true; // Makes this item an accessory. change this comment sometimes.
             item.rare = ItemRarityID.Blue;
             item.value = Item.sellPrice(gold: 1); // Sets the item sell price to one gold coin.
         }
