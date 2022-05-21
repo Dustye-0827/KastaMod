@@ -27,7 +27,7 @@ namespace Kasta.Tiles
 
         public override bool Drop(int i, int j)
         {
-			Item.NewItem(i * 16, j * 16, 16, 16, mod.ItemType("SuspiciousHead"), Main.rand.Next(1, 1));
+			Item.NewItem(i * 16, j * 16, 16, 16, mod.ItemType("SuspiciousHead"), Main.rand.Next(0, 1));
             return base.Drop(i, j);
         }
     }
