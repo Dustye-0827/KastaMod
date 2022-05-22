@@ -27,7 +27,7 @@ namespace Kasta.Items
             item.useTime = 16;
             item.autoReuse = true;
             item.knockBack = 3;
-            item.pick = 60;
+            item.pick = 70;
             item.rare = ItemRarityID.Blue;
             item.value = Item.sellPrice(gold: 1); // Sets the item sell price to one gold coin.
         }
