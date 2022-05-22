@@ -15,11 +15,18 @@ namespace Kasta.NPCs
                     Item.NewItem(npc.getRect(), ModContent.ItemType<Items.WormScale>(), Main.rand.Next(13, 24));
                 }
             }
-            //if (npc.type == NPCID.SkeletronHead)
+            if (npc.type == NPCID.Zombie)
             {
-               //if (Main.rand.NextBool(1))   //item rarity
+               if (Main.rand.NextBool(100))   //item rarity
                 {
-                  // Item.NewItem(npc.getRect(), ItemID.BoneSword);
+                  Item.NewItem(npc.getRect(), ModContent.ItemType<Items.Shovel>());
+                }
+            }
+            if (npc.type == NPCID.BloodZombie)
+            {
+                if (Main.rand.NextBool(100))   //item rarity
+                {
+                    Item.NewItem(npc.getRect(), ModContent.ItemType<Items.Shovel>());
                 }
             }
         }
