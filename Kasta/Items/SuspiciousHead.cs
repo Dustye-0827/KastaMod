@@ -8,8 +8,9 @@ namespace Kasta.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Suspicious Head");
-            Tooltip.SetDefault("You hear underground noises...");
+            DisplayName.SetDefault("Sandy Fang");
+            Tooltip.SetDefault("`You hear underground noises...`" +
+                "\nSummons the Cave Demolisher when used in the Desert");
             ItemID.Sets.SortingPriorityBossSpawns[item.type] = 12;
         }
 
@@ -36,6 +37,16 @@ namespace Kasta.Items
             NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("CaveDemolisherHead"));
             Main.PlaySound(SoundID.ForceRoar, player.position, 0);
             return true;
+        }
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<Items.WormScale>(), 15);
+            recipe.AddIngredient(ItemID.SandBlock, 10);
+            recipe.AddIngredient(ItemID.AntlionMandible, 3);
+            recipe.AddTile(TileID.DemonAltar);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }

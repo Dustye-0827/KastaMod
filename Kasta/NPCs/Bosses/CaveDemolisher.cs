@@ -31,6 +31,8 @@ namespace Kasta.NPCs.Bosses
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
 			music = MusicID.Boss2;
+			npc.dontTakeDamageFromHostiles = true;
+			npc.friendly = false;
 		}
 
 		public override void Init()
@@ -65,7 +67,7 @@ namespace Kasta.NPCs.Bosses
 					Vector2 direction = (target.Center - npc.Center).SafeNormalize(Vector2.UnitX);
 					direction = direction.RotatedByRandom(MathHelper.ToRadians(10));
 
-					int projectile = Projectile.NewProjectile(npc.Center, direction * 1, ProjectileID.ShadowBeamHostile, 5, 0, Main.myPlayer);
+					int projectile = Projectile.NewProjectile(npc.Center, direction * 6, ProjectileID.SaucerLaser, 5, 0, Main.myPlayer);
 					Main.projectile[projectile].timeLeft = 300;
 					attackCounter = 500;
 					npc.netUpdate = true;
