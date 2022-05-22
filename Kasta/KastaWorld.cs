@@ -30,7 +30,10 @@ namespace Kasta
             #endregion
 
             #region Ores
-
+            if (ShiniesIndex != -1)
+            {
+                tasks.Insert(ShiniesIndex + 1, new PassLegacy("Kasta Ores", GenerateOres));
+            }
             #endregion
         }
         #endregion
@@ -38,10 +41,9 @@ namespace Kasta
         #region Shinies
         private void GenerateShinies(GenerationProgress progress)
         {
-            progress.Message = "Kasta Shinies";
+            progress.Message = "Generating Kasta Shinies";
 
             #region Suspicious Petrified Egg
-
             for (int a = 0; a < (int)((Main.maxTilesX * Main.maxTilesY) * 6E-05); a++)
             {
                 bool placeSuccessful = false;
@@ -81,10 +83,26 @@ namespace Kasta
         #region Ores
         private void GenerateOres(GenerationProgress progress)
         {
-            progress.Message = "Kasta Ores";
+            progress.Message = "Generating Kasta Ores";
 
-            #region Kasta Ore
+            #region Cyanitium Ore
+            for (int a = 0; a < (int)((Main.maxTilesX * Main.maxTilesY) * 6E-05); a++)
+            {
+                int x = WorldGen.genRand.Next(0, Main.maxTilesX);
+                int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceHigh, Main.maxTilesY);
 
+                Tile tile = Framing.GetTileSafely(x, y);
+                if (tile.active() && tile.type == TileID.IceBlock) // Check if the specific X, Y Coordinates Tile is Ice
+                {
+                    WorldGen.TileRunner(
+                    x, // x Coordinate
+                    y, // y Coordinate
+                    WorldGen.genRand.Next(25, 32), // Strength
+                    WorldGen.genRand.Next(9, 17), // Steps
+                    ModContent.TileType<CyanitiumOre>() // Tile
+                    );
+                }
+            }
             #endregion
         }
         #endregion
