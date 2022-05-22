@@ -22,18 +22,9 @@ namespace Kasta.Tiles
             name.SetDefault("Cyanitium Ore");
             AddMapEntry(new Color(200, 20, 20), name);
 
-
-            if (!NPC.downedBoss2)
-            {
-                minPick = 999999;
-            }
-            else
-            {
-                minPick = 70;
-            }
-
+            minPick = 70;
             dustType = DustID.Platinum;
-            //drop = ModContent.ItemType<DropDirectory>();
+            drop = ModContent.ItemType<Items.Placeables.CyanitiumOre>();
             soundType = SoundID.Tink;
             soundStyle = 1;
             mineResist = 2.5f;
