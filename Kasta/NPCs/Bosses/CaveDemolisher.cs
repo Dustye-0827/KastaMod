@@ -24,6 +24,8 @@ namespace Kasta.NPCs.Bosses
 			npc.buffImmune[31] = true;
 			npc.lavaImmune = true;
 			npc.boss = true;
+			npc.height = 130;
+			npc.width = 62;
 			npc.damage = 35;
 			npc.defense = 1;
 			npc.lifeMax = 1500;
@@ -83,6 +85,8 @@ namespace Kasta.NPCs.Bosses
 			npc.CloneDefaults(NPCID.DiggerBody);
 			npc.aiStyle = -1;
 			npc.damage = 35;
+			npc.height = 130;
+			npc.width = 38;
 			npc.defense = 2;
 			npc.lifeMax = 500;
 			npc.value = 50f;
@@ -99,6 +103,8 @@ namespace Kasta.NPCs.Bosses
 			npc.aiStyle = -1;
 			npc.damage = 35;
 			npc.defense = 4;
+			npc.height = 130;
+			//npc.width = 78;
 			npc.lifeMax = 500;
 			npc.value = 50f;
 			npc.HitSound = SoundID.NPCHit1;
